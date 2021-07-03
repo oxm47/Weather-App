@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg"
+    tools:context=".Activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/city_name_edit"
+            android:textColor="@android:color/white"
+            android:hint="Enter city name"
+            android:textColorHint="@android:color/white"
+            android:maxLines="1"
+            android:inputType="textCapSentences"
+            android:layout_margin="10dp"
+            android:imeOptions="actionSearch"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_search"
+            android:background="#00000000"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp"
+            android:visibility="gone"
+            android:layout_margin="8dp"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/temp_tv"
+                    android:text="--°"
+                    android:fontFamily="serif"
+                    android:textSize="40sp"
+                    android:layout_marginLeft="60dp"
+                    android:padding="5dp"
+                    android:layout_alignParentStart="true"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/maxMin"
+                    android:layout_below="@+id/temp_tv"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/minTempTV"
+                    android:text="--° /"
+                    android:padding="2dp"
+                    android:layout_marginLeft="60dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/maxTempTv"
+                    android:text="--° "
+                    android:padding="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_below="@+id/maxMin"
+                    android:id="@+id/cityNameTv"
+                    android:text="--"
+                    android:padding="5dp"
+                    android:layout_marginLeft="60dp"
+
+                    android:textAlignment="center"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/weather_desc_tv"
+                    android:text="----"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="30sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/temp_tv"
+                    android:layout_marginLeft="40dp"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/feels_like"
+                    android:text="----"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/weather_desc_tv"
+                    android:layout_marginLeft="40dp"
+                    android:layout_alignEnd="@+id/weather_desc_tv"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:text="----"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/feels_like"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="40dp"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/next_btn"
+        android:text="Map Screen"
+        android:paddingHorizontal="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/records_btn"
+        android:text="All Records"
+        android:paddingHorizontal="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
